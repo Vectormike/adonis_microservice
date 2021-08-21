@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+    rabbitmq:
+        image: rabbitmq:3.8.7-management
+        volumes:
+            - ./rabbitMQ/data:/var/lib/rabbitmq/mnesia
+        ports:
+            - 25672:15672
+            #- 25671:5671 only for SSL, not used
+            - 15672:5672
+
+    
